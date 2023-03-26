@@ -1,0 +1,19 @@
+[project]
+name = "nonebot-plugin-helloworld"
+version = "0.0.0"
+description = "NoneBot2 Hello World"
+authors = [
+    {name = "Akirami", email = "Akiramiaya@outlook.com"},
+]
+license = {text = "MIT"}
+dependencies = ["nonebot2>=2.0.0rc3"]
+requires-python = ">=3.8"
+readme = "README.md"
+
+[project.urls]
+Homepage = "https://github.com/A-kirami/nonebot-plugin-helloworld"
+Repository = "https://github.com/A-kirami/nonebot-plugin-helloworld"
+
+[build-system]
+requires = ["pdm-pep517>=0.12.0"]
+build-backend = "pdm.pep517.api"
