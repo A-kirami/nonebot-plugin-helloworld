@@ -1,7 +1,7 @@
 from nonebot import on_message
 from nonebot.matcher import Matcher
 from nonebot.params import EventPlainText
-from nonebot.adapters.onebot.v11 import MessageEvent
+from nonebot.internal.adapter import Event
 
 
 async def rule_check_head(text: str = EventPlainText()) -> bool:
@@ -13,8 +13,8 @@ helloworld = on_message(rule=rule_check_head, priority=5, block=False)
 
 
 @helloworld.handle()
-async def _(matcher: Matcher, event: MessageEvent) -> None:
-    key = event.message.extract_plain_text()
+async def _(matcher: Matcher, event: Event) -> None:
+    key = event.get_plaintext()
     await matcher.send(I18N[key])
 
 
