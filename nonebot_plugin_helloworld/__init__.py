@@ -1,3 +1,5 @@
+from typing import NoReturn
+
 from nonebot import on_message
 from nonebot.internal.adapter import Event
 from nonebot.matcher import Matcher
@@ -27,6 +29,6 @@ helloworld = on_message(rule=hello_rule)
 
 
 @helloworld.handle()
-async def _(matcher: Matcher, state: T_State) -> None:
+async def _(matcher: Matcher, state: T_State) -> NoReturn:
     reply: str = state["reply"]
-    await matcher.send(reply)
+    await matcher.finish(reply)
