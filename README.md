@@ -26,8 +26,6 @@ _✨ Hello World! ✨_
 
 你好，世界
 
-![Hello](readme/preview.svg)
-
 ## 💿 安装
 
 <details>

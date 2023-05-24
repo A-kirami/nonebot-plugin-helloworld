@@ -10,7 +10,7 @@ I18N = {
 }
 
 
-helloworld = on_fullmatch(tuple(I18N.keys()), ignorecase=True)
+helloworld = on_fullmatch(tuple(I18N), ignorecase=True)
 
 
 @helloworld.handle()
