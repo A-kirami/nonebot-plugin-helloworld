@@ -15,4 +15,5 @@ helloworld = on_fullmatch(tuple(I18N), ignorecase=True)
 
 @helloworld.handle()
 async def _(matcher: Matcher, event: Event) -> NoReturn:
-    await matcher.finish(I18N[event.get_plaintext().lower()])
+    key = event.get_plaintext().lower()
+    await matcher.finish(I18N[key])
