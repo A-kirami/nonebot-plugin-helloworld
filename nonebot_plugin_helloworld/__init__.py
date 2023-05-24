@@ -12,7 +12,7 @@ I18N = {
 async def hello_rule(event: MessageEvent, state: T_State) -> bool:
     key = event.message.extract_plain_text()
     for k, v in I18N.items():
-        if key == k.lower():
+        if k == key.lower():
             state["reply"] = v
             return True
     return False
