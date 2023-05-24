@@ -13,14 +13,13 @@ I18N = {
 
 async def hello_rule(event: Event, state: T_State) -> bool:
     try:
-        message = event.get_plaintext()
+        key = event.get_plaintext().lower()
     except (ValueError, NotImplementedError):
         return False
 
-    for k, v in I18N.items():
-        if k == message.lower():
-            state["reply"] = v
-            return True
+    if key in I18N:
+        state["reply"] = I18N[key]
+        return True
 
     return False
 
