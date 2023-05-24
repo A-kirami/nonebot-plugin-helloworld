@@ -1,3 +1,5 @@
+<!-- markdownlint-disable MD033 MD036 MD041 -->
+
 <div align="center">
   <a href="https://v2.nonebot.dev/store"><img src="https://github.com/A-kirami/nonebot-plugin-template/blob/resources/nbp_logo.png" width="180" height="180" alt="NoneBotPluginLogo"></a>
   <br>
@@ -9,7 +11,6 @@
 # nonebot-plugin-helloworld
 
 _✨ Hello World! ✨_
-
 
 <a href="./LICENSE">
     <img src="https://img.shields.io/github/license/A-kirami/nonebot-plugin-helloworld.svg" alt="license">
@@ -24,6 +25,8 @@ _✨ Hello World! ✨_
 ## 📖 介绍
 
 你好，世界
+
+![Hello](readme/preview.svg)
 
 ## 💿 安装
 
@@ -43,21 +46,25 @@ _✨ Hello World! ✨_
 <summary>pip</summary>
 
     pip install nonebot-plugin-helloworld
+
 </details>
 <details>
 <summary>pdm</summary>
 
     pdm add nonebot-plugin-helloworld
+
 </details>
 <details>
 <summary>poetry</summary>
 
     poetry add nonebot-plugin-helloworld
+
 </details>
 <details>
 <summary>conda</summary>
 
     conda install nonebot-plugin-helloworld
+
 </details>
 
 打开 nonebot2 项目根目录下的 `pyproject.toml` 文件, 在 `[tool.nonebot]` 部分追加写入
@@ -67,7 +74,9 @@ _✨ Hello World! ✨_
 </details>
 
 ## 🎉 使用
+
 ### 指令表
-| 指令 | 权限 | 需要@ | 范围 | 说明 |
-|:-----:|:----:|:----:|:----:|:----:|
-| hello | 无 | 否 | 私聊/群聊 | world |
+
+| 指令  | 权限 | 需要@ |   范围    | 说明  |
+| :---: | :--: | :---: | :-------: | :---: |
+| hello |  无  |  否   | 私聊/群聊 | world |
