@@ -1,5 +1,5 @@
 from nonebot import on_message
-from nonebot.adapters.onebot.v11 import MessageEvent
+from nonebot.internal.adapter import Event
 from nonebot.matcher import Matcher
 from nonebot.typing import T_State
 
@@ -9,12 +9,17 @@ I18N = {
 }
 
 
-async def hello_rule(event: MessageEvent, state: T_State) -> bool:
-    key = event.message.extract_plain_text()
+async def hello_rule(event: Event, state: T_State) -> bool:
+    try:
+        message = event.get_plaintext()
+    except (ValueError, NotImplementedError):
+        return False
+
     for k, v in I18N.items():
-        if k == key.lower():
+        if k == message.lower():
             state["reply"] = v
             return True
+
     return False
 
 
